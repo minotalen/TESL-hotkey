@@ -1,11 +1,18 @@
 #SingleInstance force ; Replace an existing script
+
+; Changes the tray icon's tooltip (displayed when mouse hovers over it)
+Menu, tray, Tip, TESL Hotkeys
+; Show Tooltip in the tray that the script is active
+TrayTip, TESL Hotkeys, running...,,1
+
 dragSpeed = 6
 
-#IfWinActive The Elder Scrolls: Legends ahk_class UnityWndClass ; only active inside TESL window
+; Makes subsequent hotkeys only function if specified window is active
+#IfWinActive The Elder Scrolls: Legends ahk_class UnityWndClass
 
 ;toggle hotkeys on/off
 +x:: ; shift + X
-Suspend
+toggle()
 return
 
 ; End turn
@@ -59,6 +66,10 @@ return
 
 
 ;functions
+toggle() {
+  Suspend
+}
+
 concede() {
   Click 1867, 23
   Sleep, 200
@@ -71,6 +82,7 @@ concede() {
 endturn() {
   MouseGetPos, StartX, StartY
   Click 1592, 932
+  Sleep, 10
   MouseMove, StartX, StartY
 }
 
@@ -81,7 +93,9 @@ mulligan(number) {
   IfEqual, number, 2, Click 962, 458
   IfEqual, number, 3, Click 1253, 456
   IfEqual, number, 0, Click 1021, 914
+  Sleep, 20
   MouseMove, StartX, StartY
+  BlockInput, Off
 }
 
 drop(lane) { ;drops card from hand in a lane
