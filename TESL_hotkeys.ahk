@@ -3,14 +3,12 @@
 ; Changes the tray icon's tooltip (displayed when mouse hovers over it)
 Menu, tray, Tip, TESL Hotkeys
 ; Show Tooltip in the tray that the script is active
-TrayTip, TESL Hotkeys, running...,,1
+TrayTip, TESL Hotkeys, running...,,16
+; Makes subsequent hotkeys only function if specified window is active
+#IfWinActive The Elder Scrolls: Legends ahk_class UnityWndClass
 
 dragSpeed = 6
 pileOpen = 0
-
-
-; Makes subsequent hotkeys only function if specified window is active
-; #IfWinActive The Elder Scrolls: Legends ahk_class UnityWndClass
 
 ;toggle hotkeys on/off
 +x:: ; shift + X

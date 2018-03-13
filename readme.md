@@ -10,8 +10,8 @@ It allows performing some common actions, attacking, playing creatures and endin
 
     __or__
 
-2. * Clone the repository or download the file [TESL_hotkeys.ahk][5] ("save as...")
-   * Install [AutoHotkey][3]
+2. * Clone the repository or download the file [TESL_hotkeys.ahk][3] ("save as...")
+   * Install [AutoHotkey][4]
    * Run the .ahk file (double click on it / drag it onto the Autohotkey executable)
 
 A message will pop up, that TESL Hotkeys is running.
@@ -36,7 +36,9 @@ Shift X | toggle hotkeys on/off
 
 The script itself is currently very rudimentary, it has only been tested with my screen resolution. It might be that you have to adapt the coordinates to your resolution.
 
-I have mapped the y key so it copies the x and y coordinates of the mouse position. These coordinates can be used to edit the script to fit your resolution. To do so find the corresponding button ingame, hover over it with your mouse, press y and paste the coordinates into the variables in the script.
+I have mapped the y key so it copies the x and y coordinates of the mouse position. These coordinates can be used to edit the script to fit your resolution.
+
+You could also contribute to this script by [adding absolute coordinate support][5]
 
 ## Roadmap
 
@@ -48,10 +50,11 @@ I have mapped the y key so it copies the x and y coordinates of the mouse positi
 - attack all key for each lane
 
 ## Contribute
-If you have any remarks, improvements or have found bugs, please don't hesitate to issue a pull request or [open an issue][4].
+If you have any remarks, improvements or have found bugs, please don't hesitate to issue a pull request or [open an issue][6].
 
 [1]: https://legends.bethesda.net/
 [2]: https://github.com/minotalen/TESL-hotkey/raw/master/TESL_hotkeys.exe
-[3]: http://ahkscript.org/download/
-[4]: https://github.com/minotalen/TESL-hotkey/issues/new
-[5]: https://raw.githubusercontent.com/minotalen/TESL-hotkey/master/TESL_hotkeys.ahk
+[3]: https://raw.githubusercontent.com/minotalen/TESL-hotkey/master/TESL_hotkeys.ahk
+[4]: http://ahkscript.org/download/
+[5]: https://github.com/minotalen/TESL-hotkey/issues/2
+[6]: https://github.com/minotalen/TESL-hotkey/issues/new
