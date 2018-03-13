@@ -2,11 +2,11 @@
 
 The included .ahk file is an autohotkey script for TESL which enables you to control parts of the game with your keyboard. The script itself is currently very rudimentary, it has only been tested with my screen resolution.
 
-I have mapped the y key so it copies the x and y coordinates of the mouse position. These coordinates can be used to edit the script for your resolution.
+I have mapped the y key so it copies the x and y coordinates of the mouse position. These coordinates can be used to edit the script to fit your resolution. To do so find the corresponding button, hover over it with your mouse and paste the coordinates into the script.
 
 #### next changes
 
-* variables for all coordinates to allow configuration to different resolutions
+* global variables for all coordinates to allow configuration to different resolutions
 
 * a way to select cards in hand (moving through them with A and D for example)
 
@@ -16,18 +16,15 @@ I have mapped the y key so it copies the x and y coordinates of the mouse positi
 
   ​
 
-### key mapping
+###  key mapping
 
-**enter** - hit play button on deck selection to start a new game
-**shift q** - concede game
-**middle mouse** - end turn
-**right mouse** - attack face with what is under cursor
-**left arrow key** - drop selected card in left lane
-**right arrow key** - drop selected card in right lane
-**b,n,m** - starting selection left, middle, right
-**shift N** - pick selectionutox
-
-**shift X** - toggle hotkeys on/off
-
-
+**enter** - hit play button on deck selection to start a new game  
+**shift q** - concede game  
+**middle mouse** - end turn    
+**right mouse** - attack face with what is under cursor  
+**left arrow key** - drop selected card in left lane  
+**right arrow key** - drop selected card in right lane  
+**b,n,m** - starting selection left, middle, right  
+**shift N** - pick selection  
+**shift X** - toggle hotkeys on/off  
 
