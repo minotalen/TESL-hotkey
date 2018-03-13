@@ -17,32 +17,35 @@ It allows performing some common actions, attacking, playing creatures and endin
 A message will pop up, that TESL Hotkeys is running.
 The script lives in the taskbar and can be quit from there.
 
-## adapt coordinates
-
-The script itself is currently very rudimentary, it has only been tested with my screen resolution.
-
-I have mapped the y key so it copies the x and y coordinates of the mouse position. These coordinates can be used to edit the script to fit your resolution. To do so find the corresponding button, hover over it with your mouse and paste the coordinates into the script.
-
 ##  Hotkeys
 
 Key | Function
 --- | ---
-Enter | hit play button on deck selection
-Shift Q | concede game  
-Middle Mouse, Shift+Space | end turn    
-Right Mouse, Spacebar  | attack face with what is under cursor  
+Middle Mouse, Shift+Space | end turn  
+Right Mouse, Spacebar | attack face with what is under cursor    
+Enter | hit play button on deck selection  
 Left Arrow Key | drop selected card in left lane  
 Right Arrow Key | drop selected card in right lane  
 b,n,m | mulligan left, middle, right  
-Shift B or N or M | mulligan pick  
+Shift B, N, M | mulligan finish
+Shift Q | concede game  
+d, Shift D | view own/opponent deck (remaining cards)
 Shift X | toggle hotkeys on/off   
+
+## If it doesnt work, adapt your coordinates!
+
+The script itself is currently very rudimentary, it has only been tested with my screen resolution. It might be that you have to adapt the coordinates to your resolution.
+
+I have mapped the y key so it copies the x and y coordinates of the mouse position. These coordinates can be used to edit the script to fit your resolution. To do so find the corresponding button ingame, hover over it with your mouse, press y and paste the coordinates into the variables in the script.
 
 ## Roadmap
 
 - global variables for all coordinates to allow configuration to different resolutions
-- a way to select cards in hand (moving through them with A and D for example)
-- a way to select creatures on board (both own and enemy creatures)
-- buttons to view own/opp deck and discard
+- select cards in hand (moving through them with A and D for example)
+- select creatures on board (both own and enemy creatures)
+- attack selected enemy creature with selected own creature
+- buttons to view own/opp deck and discard pile
+- attack all key for each lane
 
 ## Contribute
 If you have any remarks, improvements or have found bugs, please don't hesitate to issue a pull request or [open an issue][4].
