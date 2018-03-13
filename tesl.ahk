@@ -1,73 +1,106 @@
 #SingleInstance force ; Replace an existing script
+dragSpeed = 6
 
-+x::
+#IfWinActive The Elder Scrolls: Legends ahk_class UnityWndClass ; only active inside TESL window
+
+;toggle hotkeys on/off
++x:: ; shift + X
 Suspend
 return
 
-Enter:: ;play again
-Click 1124, 960
+; End turn
+mbutton:: ; Middle mouse button
+endturn()
 return
 
-mbutton:: ; End turn
-MouseGetPos, StartX, StartY
-Click 1592, 932
-MouseMove, StartX, StartY
+;attack face
+rbutton:: ; Right mouse button
+Space:: ; Spacebar
+face()
 return
 
-rbutton:: ;attack face
-MouseGetPos, StartX, StartY
-Click down
-Sleep, 10
-MouseClickDrag, Left, %StartX%, %StartY%, 967, 155, 10
-MouseMove, StartX, StartY
+; mulligan selection
+b:: ; mulligan selection card 1
+mulligan(1)
 return
-
-; starting selection
-b:: ; Starting selection card 1
-MouseGetPos, StartX, StartY
-Click 647, 401
-MouseMove, StartX, StartY
+n:: ; mulligan selection card 2
+mulligan(2)
 return
-n:: ; Starting selection card 2
-MouseGetPos, StartX, StartY
-Click 962, 458
-MouseMove, StartX, StartY
-return
-m:: ; Starting selection card 3
-MouseGetPos, StartX, StartY
-Click 1253, 456
-MouseMove, StartX, StartY
+m:: ; mulligan selection card 3
+mulligan(3)
 return
 +n:: ; finish selection
-Click 1021, 914
++b:: ; shift+b or shift+n or shift+m
++m::
+mulligan(0)
 return
 
-+q:: ; concede game
-Click 1867, 23
-Sleep, 200
-Click 997, 387
-Sleep, 1700
-Click 1122, 806i
-
-
-
 Left:: ; drop in left lane
-MouseGetPos, StartX, StartY
-Click down
-Sleep, 10
-MouseClickDrag, Left, %StartX%, %StartY%, 478, 584, 10 
-MouseMove, StartX, StartY
+drop(1)
 return
 
 Right:: ; drop in right lane
-MouseGetPos, StartX, StartY
-Click down
-Sleep, 10
-MouseClickDrag, Left, %StartX%, %StartY%, 1397, 589, 10
-MouseMove, StartX, StartY
+drop(2)
 return
 
-y::
+;play again
+Enter:: ; Enter Key
+Click 1124, 960
+return
+
++q:: ; concede game
+concede()
+return
+
+y:: ; helper function to get mouse coordinates
 MouseGetPos, StartX, StartY
 clipboard = Click %StartX%, %StartY%
 return
+
+
+;functions
+concede() {
+  Click 1867, 23
+  Sleep, 200
+  Click 997, 387
+  Sleep, 1700
+  Click 1122, 806
+}
+
+; End turn
+endturn() {
+  MouseGetPos, StartX, StartY
+  Click 1592, 932
+  MouseMove, StartX, StartY
+}
+
+mulligan(number) {
+  BlockInput, On
+  MouseGetPos, StartX, StartY
+  IfEqual, number, 1, Click 647, 401
+  IfEqual, number, 2, Click 962, 458
+  IfEqual, number, 3, Click 1253, 456
+  IfEqual, number, 0, Click 1021, 914
+  MouseMove, StartX, StartY
+}
+
+drop(lane) { ;drops card from hand in a lane
+  BlockInput, On
+  MouseGetPos, StartX, StartY
+  Click down
+  Sleep, 10
+  IfEqual, lane, 1, MouseClickDrag, Left, %StartX%, %StartY%, 478, 584, %dragSpeed%
+  IfEqual, lane, 2, MouseClickDrag, Left, %StartX%, %StartY%, 1397, 589, %dragSpeed%
+  MouseMove, StartX, StartY
+  BlockInput, Off
+}
+
+face() { ;drags from mouse position to enemy face
+  BlockInput, On
+  MouseGetPos, StartX, StartY
+  Click down
+  Sleep, 10
+  MouseClickDrag, Left, %StartX%, %StartY%, 967, 155, %dragSpeed%
+  MouseMove, StartX, StartY
+  BlockInput, Off
+}

@@ -20,8 +20,8 @@ I have mapped the y key so it copies the x and y coordinates of the mouse positi
 
 **enter** - hit play button on deck selection to start a new game  
 **shift q** - concede game  
-**middle mouse** - end turn    
-**right mouse** - attack face with what is under cursor  
+**middle mouse** or **shift+space**- end turn    
+**right mouse** or **space** - attack face with what is under cursor  
 **left arrow key** - drop selected card in left lane  
 **right arrow key** - drop selected card in right lane  
 **b,n,m** - starting selection left, middle, right  

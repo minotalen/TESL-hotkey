@@ -1,0 +1,23 @@
+emotes
+ownface Click 951, 820
+hello Click 772, 731
+goodgame Click 762, 773
+implore Click 758, 838
+taunt Click 773, 892
+oops Click 1155, 725
+niceplay Click 1167, 784
+thankyou Click 1154, 830
+sorry Click 1147, 885
+
+
+Emote(EmoteX, EmoteY) {
+	BlockInput, On
+	Avatar := (951, 820)
+	Emote := GetAbsolutePixels(EmoteX, EmoteY)
+	MouseGetPos, MouseX, MouseY
+	MouseClick, right, Avatar[1], Avatar[2]
+	Sleep, 120 ; Wait until bubbles have popped up
+	MouseClick, left, Emote[1], Emote[2]
+	Sleep, 100
+	MouseMove, %MouseX%, %MouseY%
+	BlockInput, Off
