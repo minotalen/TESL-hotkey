@@ -16,7 +16,7 @@ I have mapped the y key so it copies the x and y coordinates of the mouse positi
 
   ​
 
-####key mapping
+### key mapping
 
 **enter** - hit play button on deck selection to start a new game
 **shift q** - concede game
