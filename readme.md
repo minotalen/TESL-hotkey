@@ -21,15 +21,19 @@ The script lives in the taskbar and can be quit from there.
 
 Key | Function
 --- | ---
-Middle Mouse, Shift+Space | end turn  
-Right Mouse, Spacebar | attack face with what is under cursor    
+Middle Mouse, Spacebar | end turn  
+Right Mouse Button | attack face with what is under cursor    
 Enter | hit play button on deck selection  
-Left Arrow Key | drop selected card in left lane  
+Left Arrow Key | drop selected card in left lane
 Right Arrow Key | drop selected card in right lane  
+i,o | scroll through opponent lane (saves position)
+k,l | scroll through own lane (saves position)
+p | attack from own lane to opp lane (select with i,o,k,l)
+r, PgDn | activate the magicka ring
 b,n,m | mulligan left, middle, right  
 Shift B, N, M | mulligan finish
 Shift Q | concede game  
-d, Shift D | view own/opponent deck (remaining cards)
+d, Shift D (PgUp, Shift PgUp) | view own/opponent deck (remaining cards)
 Shift X | toggle hotkeys on/off   
 
 ## If it doesnt work, adapt your coordinates!

@@ -9,11 +9,16 @@ niceplay Click 1167, 784
 thankyou Click 1154, 830
 sorry Click 1147, 885
 
+owndeck 1416, 953
 
-Emote(EmoteX, EmoteY) {
+rewardsDone 935, 1013
+
+
+
+Emote(EmoteX, EmoteY)
 	BlockInput, On
-	Avatar := (951, 820)
-	Emote := GetAbsolutePixels(EmoteX, EmoteY)
+	Avatar = (951, 820)
+	Emote = GetAbsolutePixels(EmoteX, EmoteY)
 	MouseGetPos, MouseX, MouseY
 	MouseClick, right, Avatar[1], Avatar[2]
 	Sleep, 120 ; Wait until bubbles have popped up
